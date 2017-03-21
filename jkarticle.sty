@@ -30,7 +30,7 @@
 
 \renewcommand{\@maketitle}{
 \thispagestyle{empty}
-\setcounter{page}{0}
+%\setcounter{page}{0}
 \begin{center}
 {\Huge \@jatitle} \\
 {\large \@entitle}
@@ -65,6 +65,7 @@
 {\Large (\@submittingdate 提出)}
 
 \newpage
+\thispagestyle{empty}
 
 東京農工大学 工学部情報工学科 \@articleyear 年度 卒業論文 要旨 \\
 題目 {\bf \@jatitle} \\
@@ -72,4 +73,11 @@
 学籍番号 \@studentid 氏名 \@jaauthor (\@enauthor) \\
 提出日 \@submittingdate
 \end{center}
+
+\newpage
+\thispagestyle{empty}
+\tableofcontents
+
+\newpage
+\setcounter{page}{1}
 }
