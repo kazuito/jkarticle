@@ -25,11 +25,7 @@
 \def\picture#1{\gdef\@picture{\includegraphics[height=50mm]{#1}}}
 
 \renewcommand{\maketitle}{
-\begingroup
-\newgeometry{top=13mm,left=13mm,includeheadfoot}
 \@maketitle
-\restoregeometry
-\endgroup
 }
 
 \renewcommand{\@maketitle}{
