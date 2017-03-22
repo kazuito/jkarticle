@@ -25,12 +25,15 @@
 \def\picture#1{\gdef\@picture{\includegraphics[height=50mm]{#1}}}
 
 \renewcommand{\maketitle}{
+\pagestyle{empty}
 \@maketitle
+\newpage
+\pagestyle{plain}
+\setcounter{page}{1}
 }
 
 \renewcommand{\@maketitle}{
-\thispagestyle{empty}
-%\setcounter{page}{0}
+%\thispagestyle{empty}
 \begin{center}
 {\Huge \@jatitle} \\
 {\large \@entitle}
@@ -65,7 +68,7 @@
 {\Large (\@submittingdate 提出)}
 
 \newpage
-\thispagestyle{empty}
+%\thispagestyle{empty}
 
 東京農工大学 工学部情報工学科 \@articleyear 年度 卒業論文 要旨 \\
 題目 {\bf \@jatitle} \\
@@ -75,9 +78,6 @@
 \end{center}
 
 \newpage
-\thispagestyle{empty}
+%\thispagestyle{empty}
 \tableofcontents
-
-\newpage
-\setcounter{page}{1}
 }
