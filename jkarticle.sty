@@ -5,11 +5,11 @@
 \gdef\@jaauthor{}
 \gdef\@enauthor{}
 \gdef\@enteredyear{}
-\gdef\@articleyear{}
+\gdef\@submityear{}
 \gdef\@studentid{}
 \gdef\@professorname{}
 \gdef\@professorsuffix{}
-\gdef\@submittingdate{\today}
+\gdef\@submitdate{\today}
 \gdef\@picture{\vspace{50mm}}
 
 \def\jatitle#1{\gdef\@jatitle{#1}}
@@ -17,11 +17,11 @@
 \def\jaauthor#1{\gdef\@jaauthor{#1}}
 \def\enauthor#1{\gdef\@enauthor{#1}}
 \def\enteredyear#1{\gdef\@enteredyear{#1}}
-\def\articleyear#1{\gdef\@articleyear{#1}}
+\def\submityear#1{\gdef\@submityear{#1}}
 \def\studentid#1{\gdef\@studentid{#1}}
 \def\professorname#1{\gdef\@professorname{#1}}
 \def\professorsuffix#1{\gdef\@professorsuffix{#1}}
-\def\submittingdate#1{\gdef\@submittingdate{#1}}
+\def\submitdate#1{\gdef\@submitdate{#1}}
 \def\picture#1{\gdef\@picture{\includegraphics[height=50mm]{#1}}}
 
 \renewcommand{\maketitle}{
@@ -60,19 +60,19 @@
 
 \vspace{5mm}
 
-{\Large \@articleyear 年度卒業論文}
+{\Large \@submityear 年度卒業論文}
 
 \vspace{5mm}
 
-{\Large (\@submittingdate 提出)}
+{\Large (\@submitdate 提出)}
 
 \newpage
 
-東京農工大学 工学部情報工学科 \@articleyear 年度 卒業論文 要旨 \\
+東京農工大学 工学部情報工学科 \@submityear 年度 卒業論文 要旨 \\
 題目 {\bf \@jatitle} \\
 \@entitle \\
 学籍番号 \@studentid 氏名 \@jaauthor (\@enauthor) \\
-提出日 \@submittingdate
+提出日 \@submitdate
 \end{center}
 
 \newpage
