@@ -1,6 +1,6 @@
 # jkreport.sty
 じょっこーのための卒論LaTeXスタイルファイル
-version 1.0.3
+version 1.0
 
 ## 概要
 じょっこー用卒論表紙をLaTeXスタイルファイルとして実装しました．
