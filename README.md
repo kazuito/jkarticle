@@ -1,4 +1,4 @@
-# jkreport.sty
+# jkarticle.sty
 じょっこーのための卒論LaTeXスタイルファイル
 version 1.0
 
