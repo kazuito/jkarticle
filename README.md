@@ -15,7 +15,7 @@ texmf-localディレクトリに入れることで，何回もjkarticle.styを�
 
 ## 使い方
 ### 読み込ませる
-`\documentclass{jsarticle}`などと`\begin{document}`の間(プリアンブル)に`\usepackage{jkarticle}`を挿入して下さい．PDF化することが大半だと思うので，`\usepackage[dvipdfmx]{graphicx}`を挿入しておけばOKです．
+`\documentclass{jsarticle}`などと`\begin{document}`の間(プリアンブル)に`\usepackage{jkarticle}`を挿入して下さい．PDF化することが大半だと思うので，`\usepackage[dvipdfmx]{graphicx}`を挿入しておけばOKです．また，卒論提出日の項目が和暦になっているため，`\today`を使う場合はあらかじめ`\和暦`を挿入しておく必要があることに注意が必要です．
 
 以下のようになればOKです．
 
@@ -24,13 +24,14 @@ texmf-localディレクトリに入れることで，何回もjkarticle.styを�
 \usepackage{color,okumacro}
 \usepackage[dvipdfmx]{graphicx}
 \usepackage{jkarticle}
+\和暦
 
 \begin{document}
 〜本文〜
 \end{document}
 ```
 
-注意: `sample.tex`，`template.tex`では`\documentclass[uplatex]{jsarticle}`となっています．これは，upLaTeX をエンジンとして使用するためです．他のエンジン（pLaTeX，XeLaTeX など）を使用する場合は，適宜変更してください．
+注意: `sample.tex`では`\documentclass[uplatex]{jsarticle}`となっています．これは，upLaTeX をエンジンとして使用するためです．他のエンジン（pLaTeX，XeLaTeX など）を使用する場合は，適宜変更してください．
 
 ### 変数を設定する
 jkarticle.styでは以下の項目をマクロで変数的に使えるようにしました．
@@ -49,4 +50,4 @@ jkarticle.styでは以下の項目をマクロで変数的に使えるように�
 
 ### 表紙を生成する
 変数を設定したら，`\maketitle`で表紙ページを生成します．
-その後はいつも通りに本文を書いていくだけです．
+その後はいつも通りに本文を書いていくだけです．また，目次も自動的に作成されます．ただし，`\tableofcontents`の仕様上，2回コンパイルを行なわないと期待通りの出力が得られないことに注意が必要です．
